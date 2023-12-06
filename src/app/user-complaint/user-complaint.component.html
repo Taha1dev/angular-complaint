@@ -1,0 +1,78 @@
+<div
+  dir="rtl"
+  class="p-5 relative fles justify-center items-center container mx-auto rounded-lg shadow-lg bg-white"
+>
+  <div class="flex justify-around gap-3 items-center lg:flex-row flex-col">
+    <div>
+      <h1 class="text-xl font-bold p-2">
+        مرحباً بك بوابة خدمة المواطن قسم الشكاوى
+      </h1>
+      <p class="text-lg font-normal max-w-2xl p-2">
+        هل لديك شكوى معينة ترغب بإطلاعنا عليها تحدث بكل اريحية إملأ الحقول أدناه
+        هل لديك شكوى معينة ترغب بإطلاعنا عليها تحدث بكل اريحية إملأ الحقول أدناه
+        هل لديك شكوى معينة ترغب بإطلاعنا عليها تحدث بكل اريحية إملأ الحقول أدناه
+        هل لديك شكوى معينة ترغب بإطلاعنا عليها تحدث بكل اريحية إملأ الحقول أدناه
+      </p>
+    </div>
+    <img
+      width="200"
+      height="200"
+      src="../../assets/images/complaint.svg"
+      alt="complaint image"
+    />
+  </div>
+  <!-- divider -->
+
+  <div class="my-5">
+    <hr style="border-top: 2px solid #2a3887" />
+  </div>
+  <div class="">
+    <form [formGroup]="complaintForm" class="flex items-start flex-col gap-4 justify-center">
+      <h1 class="text-xl font-bold">على ماذا ترغب بإطلاعنا</h1>
+      <div class="flex flex-col w-full  justify-around">
+        <div class="w-full">
+          <p class="text-lg my-3 font-medium">1. اختر نوع الشكوى من فضلك</p>
+          <mat-form-field class="w-full" appearance="fill">
+            <mat-label> نوع الشكوى</mat-label>
+            <mat-select
+              placeholder="نوع الشكوى"
+              matInput
+              formControlName="complaintType"
+            >
+              <mat-option value="one">تقنية</mat-option>
+              <mat-option value="one">خطأ في المعاملة</mat-option>
+              <mat-option value="one">مشكلة في التسليم</mat-option>
+              <mat-option value="one">مشكلة في التسليم</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="w-full">
+          <p class="text-lg my-3 font-medium">2. أخبرنا ماذا هنالك؟</p>
+          <mat-form-field class="w-full" appearance="fill">
+            <mat-label> نص الشكوى</mat-label>
+            <textarea
+              rows="4"
+              matInput
+              formControlName="complaintMessage"
+            ></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div mat-dialog-actions class="action flex justify-center gap-2 mx-20 w-full">
+        <button
+          class="bg-primary px-4 py-2 text-white rounded-md flex-1"
+          type="submit"
+          [mat-dialog-close]="false"
+        >
+          تم</button
+        ><button
+          type="button"
+          class="bg-secondary px-4 py-2 text-white rounded-md flex-1"
+          [mat-dialog-close]="false"
+        >
+          خروج
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

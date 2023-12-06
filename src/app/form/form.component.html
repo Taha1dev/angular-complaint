@@ -1,0 +1,81 @@
+<div class="parent" dir="rtl">
+  <div class="bg-primary flex items-center justify-center p-5">
+    <h1 class="text-center font-bold text-2xl text-white">تفاصيل الشكوى</h1>
+  </div>
+  <form class="mt-5">
+    <div mat-dialog-content class="content">
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>الاسم الأول </mat-label>
+          <input
+            disabled
+            matInput
+            type="text"
+            value="الاسم الأول"
+            placeholder="الإسم الأول"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>الإسم الثاني</mat-label>
+          <input
+            matInput
+            placeholder="اسم العائلة"
+            value="اسم العائلة"
+            disabled=""
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>الإيميل</mat-label>
+          <input disabled matInput type="email" placeholder="الإيميل" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Select an option</mat-label>
+          <mat-select disabled [(value)]="selected">
+            <mat-option>None</mat-option>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>حقل</mat-label>
+          <input disabled matInput placeholder="حقل" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>الرد</mat-label>
+          <textarea
+            value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius doloremque saepe molestiae recusandae quos placeat error illo distinctio dignissimos laudantium tempora libero, autem laborum nobis, quasi harum facere modi!"
+            matInput
+            rows="5"
+            disabled
+            placeholder="Ex. 12"
+          ></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div mat-dialog-actions class="action flex gap-2">
+      <button
+        type="button"
+        class="bg-secondary px-4 py-2 text-white rounded-md"
+        [mat-dialog-close]="false"
+      >
+        خروج
+      </button>
+      <button
+        class="bg-primary px-4 py-2 text-white rounded-md"
+        type="submit"
+        [mat-dialog-close]="false"
+      >
+        تم
+      </button>
+    </div>
+  </form>
+</div>
